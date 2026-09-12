@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcpanel"
+version = "0.1.0"
+description = "An all-in-one library providing server interfaces and tools to assist Minecraft server developers."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    { name = "cyber_resistor", email = "cyberresistor@proton.me" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "Operating System :: OS Independent",
+    "Topic :: Games/Entertainment",
+    
+]
+
+# Odpowiednik pliku requirements.txt (główne zależności)
+dependencies = [
+    "requests>=2.31.0",
+    "certifi==2026.7.22",
+    "charset-normalizer==3.5.1",
+    "idna==3.19",
+    "mcrcon==0.7.0",
+    "requests==2.34.2",
+    "urllib3==2.7.0"
+
+]
+
+[project.optional-dependencies]
+# Zależności deweloperskie (np. pip install .[dev])
+dev = [
+    "pytest>=7.0",
+    "black>=23.0",
+    "ruff>=0.1.0",
+]
+
+# Konfiguracja zewnętrznych narzędzi (opcjonalnie)
+[tool.setuptools]
+packages = ["mcpanel"]

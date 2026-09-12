@@ -1,0 +1,4 @@
+dist
+build
+mcpanel.egg-info
+.build-env
