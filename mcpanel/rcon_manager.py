@@ -1,4 +1,6 @@
 from mcrcon import MCRcon
+# yandere code quality :0
+
 class ServerRCONConfig:
     def __init__(self,ip,port,command,password):
         self.ip = ip

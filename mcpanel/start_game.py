@@ -1,3 +1,5 @@
+# yandere code quality :0
+
 import os
 class ServerLauncherConfig:
     def __init__(self,jvmArgs,executableJar):
