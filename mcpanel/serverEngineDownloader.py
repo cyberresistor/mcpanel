@@ -1,5 +1,6 @@
 import os
 import requests
+# yandere code quality :0
 
 
 def download_paper(version: str, output_dir: str = "."):

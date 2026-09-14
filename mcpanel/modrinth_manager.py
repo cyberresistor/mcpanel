@@ -1,5 +1,6 @@
 import os
 import requests
+# yandere code quality :0
 
 BASE_URL = "https://api.modrinth.com/v2"
 USER_AGENT = "TwojaNazwaProjektu/1.0 (kontakt@twojadomena.com)"
