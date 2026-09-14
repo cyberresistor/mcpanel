@@ -2,16 +2,20 @@ from mcrcon import MCRcon
 # yandere code quality :0
 
 class ServerRCONConfig:
-    def __init__(self,ip,port,command,password):
+    def __init__(self, ip, port, command, password):
         self.ip = ip
         self.port = port
         self.command = command
         self.password = password
+
 class ServerRCON:
+    @staticmethod
     def sendCommand(config: ServerRCONConfig):
-        mcr = MCRcon(config.ip,config.password,config.port)
-        mcr.connect()
-        mcr.command(config.command)
-        print("[SUCCESS] command sended!")
-        mcr.disconnect()
-        
+        try:
+            with MCRcon(config.ip, config.password, config.port) as mcr:
+                response = mcr.command(config.command)
+                print(f"[SUCCESS] Command sent! Response: {response}")
+                return response
+        except Exception as e:
+            print(f"[ERROR] RCON connection failed: {e}")
+            raise
